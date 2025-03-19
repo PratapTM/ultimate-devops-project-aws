@@ -3,12 +3,12 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "demo-terraform-eks-state-s3-bucket"
-
+  bucket = "demo-terraform-eks-state-s3-bucket984545"
   lifecycle {
-    prevent_destroy = false
+    prevent_destroy = true
   }
 }
+
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
   bucket = aws_s3_bucket.terraform_state.id
